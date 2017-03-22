@@ -2,8 +2,6 @@
 
     npm install watchdog-callback --save
 
-socket.emit('any-event', callback);
-
 I use it for `socket.io`. In the example below the callback may never be called:
 
 ```javascript
