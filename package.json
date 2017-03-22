@@ -1,0 +1,24 @@
+{
+  "name": "watchdog-callback",
+  "version": "1.0.0",
+  "description": "Makes sure the callaback will be called",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmitryMyadzelets/watchdog-callback.git"
+  },
+  "keywords": [
+    "callback",
+    "watchdog",
+    "timeout"
+  ],
+  "author": "Dmitry Myadzelets",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DmitryMyadzelets/watchdog-callback/issues"
+  },
+  "homepage": "https://github.com/DmitryMyadzelets/watchdog-callback#readme"
+}
