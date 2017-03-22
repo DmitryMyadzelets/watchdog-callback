@@ -1,6 +1,6 @@
 {
   "name": "watchdog-callback",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Makes sure the callaback will be called",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,8 @@
   "keywords": [
     "callback",
     "watchdog",
-    "timeout"
+    "timeout",
+    "socket.io"
   ],
   "author": "Dmitry Myadzelets",
   "license": "MIT",
