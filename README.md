@@ -17,6 +17,7 @@ To make sure it will, use the watchdog:
 
 ```javascript
 var wdc = require('watchdog-callback');
+
 socket.emit('any-event', wdc(function (tout, err, data) {
     if (tout) {
         return console.error(tout);
