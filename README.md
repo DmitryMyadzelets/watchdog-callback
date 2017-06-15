@@ -5,29 +5,27 @@
 I use it for `socket.io`. In the example below the callback may never be called:
 
 ```javascript
-    function callback(err, data) {
+    socket.emit('any-event', function (err, data) {
         if (err) {
             return console.error(err);
         }
         // have fun with data
-    }
-    socket.emit('any-event', callback);
+    });
 ```
 
 To make sure it will, use the watchdog:
 
 ```javascript
-    var wdc = require('watchdog-callback');
-    function callback(tout, err, data) {
-        if (tout) {
-            return console.error(tout);
-        }
-        if (err) {
-            return console.error(err);
-        }
-        // have fun with data
+var wdc = require('watchdog-callback');
+socket.emit('any-event', wdc(function (tout, err, data) {
+    if (tout) {
+        return console.error(tout);
     }
-    socket.emit('any-event', wdc(callback));
+    if (err) {
+        return console.error(err);
+    }
+    // have fun with data
+}));
 ```
 
 The default timeout is 5000 milliseconds. You can change it:
